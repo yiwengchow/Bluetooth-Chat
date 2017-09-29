@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conversation_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/messaging_status_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/messaging_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/messaging_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/messagingMessageBox" />
+
+        <EditText
+            android:id="@+id/messagingMessageBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/messagingButton"
+            android:layout_alignTop="@+id/messagingButton"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/messagingButton"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Type your message here" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/messagingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            app:backgroundTint="@android:color/background_light"
+            app:fabSize="normal"
+            app:rippleColor="@android:color/black"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+
+    </RelativeLayout>
+
+</FrameLayout>
